@@ -19,9 +19,11 @@ from my_settings import DATABASES, SECRET_KEY, BASE_DIR
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1', 'localhost', 'wowboya.pythonanywhere.com'
+]
 
 BASE_DIR = BASE_DIR
 
@@ -113,6 +115,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #REMOVE_APPEND_SLASH_WARNING
 APPEND_SLASH = False
